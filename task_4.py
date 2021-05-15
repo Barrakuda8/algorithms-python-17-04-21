@@ -28,7 +28,7 @@
 """
 
 
-def check_1(dct):  # O(бесконечность) - цикл while True
+def check_1(dct):  # O(1) - всё постоянное (исправлено)
     while True:
         user = input('Введите логин: ')
         try:
@@ -49,7 +49,7 @@ def check_1(dct):  # O(бесконечность) - цикл while True
             print('Ваша учётная запись активирована')
 
 
-def check_2(dct):  # O(n^2) - n * n
+def check_2(dct):  # O(n) - линейный только цикл по перебору ключей словаря, остальное всё постоянное (исправлено)
 
     def login_check():
         for _ in range(5):
